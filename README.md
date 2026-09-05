@@ -44,6 +44,9 @@ through to `That wasn't an option.`. This is tracked in
 Anything else prints `That wasn't an option.` and exits. Surrounding whitespace is not stripped,
 so a stray leading or trailing space is also rejected.
 
+A second number of `0` combined with `Divide` prints `The second number can't be zero.` instead of
+dividing. Every other combination of the four operations and two numbers is computed.
+
 ## Example
 
 Transcript of a real run under Python 2.7.18. Input was piped rather than typed, which is why the
@@ -69,8 +72,6 @@ Press Enter to exit.
 
 All of the following were reproduced under Python 2.7.18 and are tracked as issues:
 
-- A second number of `0` with `Divide` raises `ZeroDivisionError` instead of printing a message
-  ([#5](https://github.com/Stephenson-Software/basic-calculator/issues/5)).
 - Non-numeric text at either number prompt raises `ValueError` and exits, with no chance to retry
   ([#6](https://github.com/Stephenson-Software/basic-calculator/issues/6)).
 - Both operands are floats, so `Divide` reports a true-division quotient *and* a float remainder —
