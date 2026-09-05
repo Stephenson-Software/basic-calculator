@@ -9,7 +9,10 @@ elif (whatToDo == "SUBRACT"):
 elif (whatToDo == "MULTIPLY"):
 	print "The answer is ", (firstnumber * secondnumber)
 elif (whatToDo == "DIVIDE"):
-	print "The answer is ", (firstnumber / secondnumber), " with ", (firstnumber % secondnumber), " left over."
+	if (secondnumber == 0):
+		print "The second number can't be zero."
+	else:
+		print "The answer is ", (firstnumber / secondnumber), " with ", (firstnumber % secondnumber), " left over."
 else:
 	print "That wasn't an option."
 
