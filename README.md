@@ -33,13 +33,12 @@ prompt spells them:
 | Type | Result |
 |------|--------|
 | `Add` | the two numbers added |
-| `Subract` | the second number subtracted from the first |
+| `Subtract` | the second number subtracted from the first |
 | `Multiply` | the two numbers multiplied |
 | `Divide` | the first number divided by the second, followed by the remainder |
 
-Note the spelling of `Subract` — the correctly-spelled `subtract` is **not** accepted and falls
-through to `That wasn't an option.`. This is tracked in
-[issue #7](https://github.com/Stephenson-Software/basic-calculator/issues/7).
+The legacy spelling `Subract` is also accepted for backwards compatibility with previous
+versions of the prompt.
 
 Anything else prints `That wasn't an option.` and exits. Surrounding whitespace is not stripped,
 so a stray leading or trailing space is also rejected.
@@ -54,7 +53,7 @@ three prompts appear on one line with no echoed answers:
 
 ```
 $ printf '6\n3\nadd\n\n' | python calculator.py
-What is the first number? What is the second number? Add, Subract, Multiply or Divide? The answer is  9.0
+What is the first number? What is the second number? Add, Subtract, Multiply or Divide? The answer is  9.0
 
 Press Enter to exit.
 ```
@@ -63,7 +62,7 @@ The `Divide` branch additionally reports the remainder:
 
 ```
 $ printf '7\n2\ndivide\n\n' | python calculator.py
-What is the first number? What is the second number? Add, Subract, Multiply or Divide? The answer is  3.5  with  1.0  left over.
+What is the first number? What is the second number? Add, Subtract, Multiply or Divide? The answer is  3.5  with  1.0  left over.
 
 Press Enter to exit.
 ```

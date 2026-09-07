@@ -1,10 +1,10 @@
 firstnumber = float(raw_input("What is the first number? "))
 secondnumber = float(raw_input("What is the second number? "))
-whatToDo = (raw_input("Add, Subract, Multiply or Divide? ")).upper()
+whatToDo = (raw_input("Add, Subtract, Multiply or Divide? ")).upper()
 
 if (whatToDo == "ADD"):
 	print "The answer is ", (firstnumber + secondnumber)
-elif (whatToDo == "SUBRACT"):
+elif (whatToDo == "SUBTRACT" or whatToDo == "SUBRACT"):
 	print "The answer is ", (firstnumber - secondnumber)
 elif (whatToDo == "MULTIPLY"):
 	print "The answer is ", (firstnumber * secondnumber)
