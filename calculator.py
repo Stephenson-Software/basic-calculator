@@ -1,6 +1,6 @@
 firstnumber = float(raw_input("What is the first number? "))
 secondnumber = float(raw_input("What is the second number? "))
-whatToDo = (raw_input("Add, Subtract, Multiply or Divide? ")).upper()
+whatToDo = (raw_input("Add, Subtract, Multiply or Divide? ")).strip().upper()
 
 if (whatToDo == "ADD"):
 	print "The answer is ", (firstnumber + secondnumber)
@@ -14,6 +14,6 @@ elif (whatToDo == "DIVIDE"):
 	else:
 		print "The answer is ", (firstnumber / secondnumber), " with ", (firstnumber % secondnumber), " left over."
 else:
-	print "That wasn't an option."
+	print "That wasn't an option. The options are Add, Subtract, Multiply or Divide."
 
 raw_input("\nPress Enter to exit.")
