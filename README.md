@@ -40,8 +40,9 @@ prompt spells them:
 The legacy spelling `Subract` is also accepted for backwards compatibility with previous
 versions of the prompt.
 
-Anything else prints `That wasn't an option.` and exits. Surrounding whitespace is not stripped,
-so a stray leading or trailing space is also rejected.
+Surrounding whitespace is stripped before matching, so a stray leading or trailing space is
+ignored. Anything else prints `That wasn't an option. The options are Add, Subtract, Multiply or
+Divide.` and exits.
 
 A second number of `0` combined with `Divide` prints `The second number can't be zero.` instead of
 dividing. Every other combination of the four operations and two numbers is computed.
