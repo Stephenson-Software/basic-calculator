@@ -47,6 +47,10 @@ Divide.` and exits.
 A second number of `0` combined with `Divide` prints `The second number can't be zero.` instead of
 dividing. Every other combination of the four operations and two numbers is computed.
 
+Anything that isn't a number at either number prompt — including an empty line — prints
+`That wasn't a number.` straight away, skipping the remaining prompts, and then waits at the exit
+prompt. There is no chance to retry; the program has to be run again.
+
 ## Example
 
 Transcript of a real run under Python 2.7.18. Input was piped rather than typed, which is why the
@@ -70,10 +74,8 @@ Press Enter to exit.
 
 ## Known limitations
 
-All of the following were reproduced under Python 2.7.18 and are tracked as issues:
+The following was reproduced under Python 2.7.18 and is tracked as an issue:
 
-- Non-numeric text at either number prompt raises `ValueError` and exits, with no chance to retry
-  ([#6](https://github.com/Stephenson-Software/basic-calculator/issues/6)).
 - Both operands are floats, so `Divide` reports a true-division quotient *and* a float remainder —
   the same leftover twice ([#8](https://github.com/Stephenson-Software/basic-calculator/issues/8)).
 

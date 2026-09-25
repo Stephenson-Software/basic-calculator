@@ -1,5 +1,9 @@
-firstnumber = float(raw_input("What is the first number? "))
-secondnumber = float(raw_input("What is the second number? "))
+try:
+	firstnumber = float(raw_input("What is the first number? "))
+	secondnumber = float(raw_input("What is the second number? "))
+except ValueError:
+	raw_input("That wasn't a number.\n\nPress Enter to exit.")
+	raise SystemExit
 whatToDo = (raw_input("Add, Subtract, Multiply or Divide? ")).strip().upper()
 
 if (whatToDo == "ADD"):
