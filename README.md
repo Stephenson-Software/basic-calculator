@@ -72,6 +72,16 @@ What is the first number? What is the second number? Add, Subtract, Multiply or 
 Press Enter to exit.
 ```
 
+## Check
+
+```
+sh check.sh
+```
+
+Pipes canned input into the program once per operation, plus the rejected-operation, zero-divisor
+and not-a-number paths, and checks the printed answer and exit status of each. It prints
+`SKIP: no Python 2 interpreter` and exits 0 when neither `python2` nor a Python 2 `python` is found.
+
 ## Known limitations
 
 The following was reproduced under Python 2.7.18 and is tracked as an issue:
