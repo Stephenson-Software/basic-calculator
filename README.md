@@ -47,9 +47,12 @@ Divide.` and exits.
 A second number of `0` combined with `Divide` prints `The second number can't be zero.` instead of
 dividing. Every other combination of the four operations and two numbers is computed.
 
-Anything that isn't a number at either number prompt — including an empty line — prints
+Anything Python's `float` can't parse at either number prompt — including an empty line — prints
 `That wasn't a number.` straight away, skipping the remaining prompts, and then waits at the exit
 prompt. There is no chance to retry; the program has to be run again.
+
+`float` also parses scientific notation and the words `inf` and `nan`, so those count as numbers:
+`1e3` is read as `1000.0`, and `nan` plus `3` prints `The answer is  nan`.
 
 ## Example
 
