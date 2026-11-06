@@ -18,11 +18,12 @@ python calculator.py
 ```
 
 Four things are read from standard input, in this order: the first number, the second number, the
-operation, and a final line that dismisses the exit prompt.
+operation, and a final line that dismisses the exit prompt. A number that can't be parsed skips
+straight to that final line, so a run that stops there reads only two or three lines.
 
-All four are required, including the last. An unattended run that supplies fewer than four lines
-waits at whichever prompt it reached for as long as standard input stays open, and raises
-`EOFError` once it closes — so omitting only the fourth line still prints the answer first and
+Every line the program asks for is required, including the last. An unattended run that supplies
+too few waits at whichever prompt it reached for as long as standard input stays open, and raises
+`EOFError` once it closes — so omitting only the final line still prints the answer first and
 fails afterwards. Wrapping such a run in `timeout` is advisable.
 
 ## Operations
@@ -42,7 +43,7 @@ versions of the prompt.
 
 Surrounding whitespace is stripped before matching, so a stray leading or trailing space is
 ignored. Anything else prints `That wasn't an option. The options are Add, Subtract, Multiply or
-Divide.` and exits.
+Divide.` and then waits at the exit prompt.
 
 A second number of `0` combined with `Divide` prints `The second number can't be zero.` instead of
 dividing. Every other combination of the four operations and two numbers is computed.
