@@ -5,8 +5,9 @@ the result is printed.
 
 ## Requirements
 
-**Python 2.** The program uses `raw_input` and `print` statements, so it is rejected at parse time
-by Python 3 and does not run there at all. It has been verified under Python 2.7.18.
+**Python 2.** The program uses `print` statements, so it is rejected at parse time by Python 3 and
+does not run there at all. It also calls `raw_input`, which Python 3 does not define. It has been
+verified under Python 2.7.18.
 
 Which interpreter this project should target going forward is an open question — see
 [issue #1](https://github.com/Stephenson-Software/basic-calculator/issues/1).
