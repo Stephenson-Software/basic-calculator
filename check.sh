@@ -2,9 +2,11 @@
 # Smoke check for calculator.py: pipes canned input into the program and
 # checks the printed answer and the exit status. Run with: sh check.sh
 #
-# Each case supplies four input lines (first number, second number, operation,
-# and the Enter that dismisses the exit prompt). The cases record what the
-# program does today, including the divide remainder tracked in #8.
+# Each case supplies every line the program asks for: usually four (first
+# number, second number, operation, and the Enter that dismisses the exit
+# prompt), fewer when a bad number skips the remaining prompts. The cases
+# record what the program does today, including the divide remainder tracked
+# in #8.
 
 cd "$(dirname "$0")" || exit 1
 
